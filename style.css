@@ -1,0 +1,79 @@
+#firsth{
+	 text-align: center; 
+}
+table{
+	margin-top: 102px;
+    /* text-align: center; */
+    /* background: #333; */
+    color: black;
+    margin-left: 55vh;
+    font-size: 26px;
+}
+
+/* #show th, #show td{
+	padding: px;
+	margin-left:100px;
+} */
+
+input{
+	width: 349px;
+
+    height: 39px;
+}
+
+.tr1{
+	padding-top:10px;
+	line-height: 85px;
+}
+.formclass{
+	font-size:25px;
+	
+}
+#myform{
+	margin-left: 80vh;;
+}
+
+#btn{
+	width:120px;
+	height:40px;
+	
+}
+#btna{
+	margin-left: 460px;
+}
+th{
+	padding-right: 191px;
+    text-align: left;
+}
+
+td{
+	padding-left:0%;
+	margin-left:0%;
+}
+
+
+
+
+
+
+
+
+
+
+#show{
+	font-size:20px;
+	margin-left:0px;
+}
+#thead1{
+	height:30px;
+
+}
+#gender1{
+	display:flex;
+	font-size:20px;
+	width:712px;
+	
+    margin-left: -92px;
+
+
+}

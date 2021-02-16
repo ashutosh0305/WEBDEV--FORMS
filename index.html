@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="firsth">Employee Registration</h1>
+    <forms name="myForm">
+        <table>
+
+            <tr class="tr1">
+                <th>First Name</th>
+                <td><input type="text" name="fname" id="fname" required></td>
+            </tr>
+
+
+            <tr class="tr1">
+                <th>Last Name</th>
+                <td><input type="text" name="lname" id="lname" required></td>
+            </tr>
+
+            <tr class="tr1">
+                <th>Full Name</th>
+                <td><input type="text" name="fullname" id="fullname" required></td>
+            </tr>
+
+            <tr class="tr1">
+                <th>Email</th>
+                <td><input type="text" name="email" id="email" required></td>
+            </tr>
+            <tr class="tr1">
+                <th>Phone No.</th>
+                <td><input type="text" name="fphone" id="fphone" required></td>
+            </tr>
+
+
+
+            <tr class="tr1">
+                <th> gender:</th>
+                <td id="gender1">
+                    <input type="radio" id="male" name="gender" class="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" class="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" class="gender" value="other">
+                    <label for="other">Other</label>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <th>Country</th>
+                <td>
+                    
+                    <select size="1" name="cars" id="cars" >
+
+                        <option disabled="disabled" value="con">Country</option>
+                        <option value="saab">IND</option>
+                        <option value="aus">AUS</option><br><br>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>State</th>
+                <td>
+                    
+                    <select size="1" name="sate" id="state" >
+
+                        <option disabled="disabled" value="con">state</option>
+                        <option value="saab">Rajasthan</option>
+                        <option value="aus">Uttarakhand</option><br><br>
+                    
+                
+                
+                </td>
+                </tr>
+
+
+
+
+
+
+
+
+
+
+    </forms>
+
+
+
+    </table>
+    <div id="btna">
+        <td colspan="2"><input type="button" name="button" id="btn" value="Save" onclick="AddRow()"></td>
+    </div>
+
+    <table border="2" id="show">
+        <thead id="thead1">
+            <tr>
+                <th class="th1">First Name</th>
+                <th class="th1">Last Name</th>
+                <th class="th1">Full Name</th>
+                <th class="th1">Email</th>
+                <th class="th1">phone</th>
+                <th class="th1">Gender</th>
+            </tr>
+        </thead>
+    </table>
+    <!-- </center> -->
+
+    <script>
+
+        var list1 = [];
+        var list2 = [];
+        var list3 = [];
+        var list4 = [];
+        var list5 = [];
+        var list6 = [];
+
+        var n = 1;
+        var x = 0;
+
+        function AddRow() {
+            var AddRown = document.getElementById('show');
+            var NewRow = AddRown.insertRow(n);
+
+            list1[x] = document.getElementById("fname").value;
+            list2[x] = document.getElementById("lname").value;
+            list3[x] = document.getElementById("fullname").value;
+            list4[x] = document.getElementById("email").value;
+            list5[x] = document.getElementById("fphone").value;
+            list6[x] = document.getElementsByClassName("gender").value;
+            // var temp = document.forms['myForm']["gender"].value;
+            // if (temp == "male") {
+            //     list6[x] = "male";
+            //     returnval = false;
+            // }
+            // else if (temp == "female") {
+            //     list6[x] = "female";
+            // }
+            // else {
+            //     list6[x] = "other";
+            // }
+
+            var cel1 = NewRow.insertCell(0);
+            var cel2 = NewRow.insertCell(1);
+            var cel3 = NewRow.insertCell(2);
+            var cel4 = NewRow.insertCell(3);
+            var cel5 = NewRow.insertCell(4);
+            var cel6 = NewRow.insertCell(5);
+
+
+
+            cel1.innerHTML = list1[x];
+            cel2.innerHTML = list2[x];
+            cel3.innerHTML = list3[x];
+            cel4.innerHTML = list4[x];
+            cel5.innerHTML = list5[x];
+            cel6.innerHTML = list6[x];
+
+            n++;
+            x++;
+        }
+
+    </script>
+</body>
+
+</html>
